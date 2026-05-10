@@ -1,14 +1,14 @@
 export const NAV_LINKS = ["Home", "About", "Services", "Courses", "Stats", "Contact"];
 
 export const SERVICES = [
-  { icon: "💻", title: "Custom Software Development", desc: "Tailor-made software engineered for your exact business needs — scalable, robust, and future-proof." },
-  { icon: "🔍", title: "SEO Services", desc: "Data-driven SEO strategies that push you to the top of search results and keep you there." },
-  { icon: "🎨", title: "UI/UX Design", desc: "Pixel-perfect interfaces that convert visitors into loyal customers through intuitive design." },
-  { icon: "📣", title: "Digital Marketing", desc: "Full-funnel digital campaigns that amplify your brand and drive measurable ROI." },
-  { icon: "📱", title: "Social Media Marketing", desc: "Authentic social strategies that build community and turn followers into advocates." },
-  { icon: "🌐", title: "Web Development", desc: "High-performance websites built with cutting-edge stacks — fast, secure, and beautifully coded." },
-  { icon: "⚡", title: "WordPress Development", desc: "Custom WordPress themes and plugins engineered for speed, SEO, and manageability." },
-  { icon: "📊", title: "Data Analysis Services", desc: "Transform raw data into strategic insights that fuel smarter business decisions." },
+  { icon: "💻", title: "Custom Software Development", desc: "Enterprise-grade custom software tailored to your complex business workflows. From ERP systems to backend APIs, we build scalable solutions for modern enterprises." },
+  { icon: "🔍", title: "SEO Services", desc: "Dominate search rankings and drive sustainable organic traffic. We combine technical audits with keyword intelligence to build your brand's digital authority." },
+  { icon: "🎨", title: "UI/UX Design", desc: "User-focused design that blends creativity with usability. We create intuitive interfaces that increase engagement and drive higher conversions." },
+  { icon: "📣", title: "Digital Marketing", desc: "Results-driven marketing strategies designed to increase brand visibility, generate leads, and maximize ROI across multiple digital channels." },
+  { icon: "📱", title: "Social Media Marketing", desc: "Build a loyal community and drive engagement across all major social platforms. We turn likes into loyalty through strategic content and community management." },
+  { icon: "🌐", title: "Web Development", desc: "Enterprise-grade custom web applications tailored to your business needs. We build scalable, secure, and high-performance solutions that drive digital transformation." },
+  { icon: "⚡", title: "WordPress Development", desc: "Results-driven marketing strategies designed to increase brand visibility, generate leads, and maximize ROI across multiple digital channels." },
+  { icon: "📊", title: "Data Analysis Services", desc: "Turn raw data into actionable insights. Our analytics solutions help you optimize operations, improve performance, and identify new growth opportunities." },
 ];
 
 export const COURSES = [

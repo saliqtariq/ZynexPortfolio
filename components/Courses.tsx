@@ -11,7 +11,7 @@ export default function Courses() {
   };
 
   return (
-    <section id="courses" className="py-20 relative">
+    <section id="courses" className="py-20 relative scroll-mt-24">
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">

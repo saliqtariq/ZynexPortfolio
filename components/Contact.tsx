@@ -8,7 +8,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-20 relative scroll-mt-24">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-950/15 to-transparent pointer-events-none" />
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
 
