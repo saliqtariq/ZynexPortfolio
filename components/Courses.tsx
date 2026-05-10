@@ -11,12 +11,12 @@ export default function Courses() {
   };
 
   return (
-    <section id="courses" className="py-28 relative">
+    <section id="courses" className="py-20 relative">
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <div className="tag-chip mb-4">Learn & Grow</div>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-4">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white mb-4">
             Expert-Led <span className="shimmer-text">Courses</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">

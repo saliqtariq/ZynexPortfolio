@@ -14,14 +14,14 @@ export default function Stats() {
   }, []);
 
   return (
-    <section id="stats" className="py-28 relative">
+    <section id="stats" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-green-950/15 to-transparent pointer-events-none" />
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="tag-chip mb-4">By The Numbers</div>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-4">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white mb-4">
             Impact That <span className="shimmer-text">Speaks</span>
           </h2>
         </div>

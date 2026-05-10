@@ -7,7 +7,7 @@ export default function Hero() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const filteredStats = STATS.filter(s => 
+  const filteredStats = STATS.filter(s =>
     s.label === "Students Mentored" || s.label === "Satisfaction Rate"
   );
 
@@ -18,12 +18,12 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-600/5 rounded-full blur-[100px] pointer-events-none" style={{ animation: 'orb-drift 20s ease-in-out infinite reverse' }} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
-        <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-12 tracking-tight animate-in">
+        <h1 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.05] mb-10 tracking-tight animate-in">
           <span className="text-white">Build Your</span>
           <br />
           <span className="shimmer-text italic px-2">Digital Future</span>
           <br />
-          <span className="text-white text-4xl md:text-6xl lg:text-7xl opacity-90">with Zynex Solutions</span>
+          <span className="text-white text-3xl md:text-5xl lg:text-6xl opacity-90">with Zynex Solutions</span>
         </h1>
 
         {/* Buttons with softened shadows and light effect */}
@@ -44,15 +44,15 @@ export default function Hero() {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto animate-in delay-400">
           {filteredStats.map((stat, i) => (
-            <div 
-              key={i} 
-              className="group relative px-12 py-7 rounded-[2.5rem] bg-brand-card/30 border border-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-brand-green/5 hover:border-brand-green/30 min-w-[360px]"
+            <div
+              key={i}
+              className="group relative px-10 py-6 rounded-[2rem] bg-brand-card/30 border border-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-brand-green/5 hover:border-brand-green/30 min-w-[320px]"
             >
-              <div className="relative z-10 flex items-center justify-start gap-8">
-                <span className="font-display font-black text-5xl md:text-6xl text-brand-green tracking-tighter">
+              <div className="relative z-10 flex items-center justify-start gap-6">
+                <span className="font-display font-black text-4xl md:text-5xl text-brand-green tracking-tighter">
                   {stat.value}
                 </span>
-                <span className="font-display text-white text-sm md:text-lg uppercase tracking-[0.2em] font-bold group-hover:text-brand-green transition-colors text-left leading-tight">
+                <span className="font-display text-white text-[0.7rem] md:text-base uppercase tracking-[0.2em] font-bold group-hover:text-brand-green transition-colors text-left leading-tight">
                   {stat.label}
                 </span>
               </div>

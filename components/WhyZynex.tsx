@@ -3,12 +3,12 @@ import { WHY_ZYNEX } from "@/lib/data";
 
 export default function WhyZynex() {
   return (
-    <section className="py-28 relative">
+    <section id="why-zynex" className="py-20 relative">
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="tag-chip mb-4">Why Choose Us</div>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-white">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white">
             The Zynex <span className="shimmer-text">Advantage</span>
           </h2>
         </div>

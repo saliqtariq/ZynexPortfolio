@@ -8,13 +8,13 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-28 relative">
+    <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-950/15 to-transparent pointer-events-none" />
       <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="tag-chip mb-4">Get In Touch</div>
-        <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-6">
+        <h2 className="font-display font-black text-3xl md:text-5xl text-white mb-6">
           Ready to Start Your<br />
           <span className="shimmer-text">Journey?</span>
         </h2>

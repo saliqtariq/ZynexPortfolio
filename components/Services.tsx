@@ -3,12 +3,12 @@ import { SERVICES } from "@/lib/data";
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 relative overflow-hidden">
+    <section id="services" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 grid-line-bg opacity-50 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="tag-chip mb-4">What We Do</div>
-          <h2 className="font-display font-black text-4xl md:text-6xl text-white mb-4">
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white mb-4">
             Our <span className="shimmer-text">Services</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
