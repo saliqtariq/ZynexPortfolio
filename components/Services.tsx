@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { SERVICES } from "@/lib/data";
 
 export default function Services() {
@@ -23,7 +24,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {SERVICES.map((service, i) => {
-            const icons: Record<string, JSX.Element> = {
+            const icons: Record<string, React.JSX.Element> = {
               "Custom Software Development": (
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
