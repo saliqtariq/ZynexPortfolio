@@ -1,6 +1,15 @@
 "use client";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const features = [
     {
       title: "SECP REGISTERED",
@@ -57,14 +66,14 @@ export default function About() {
               ].map((item, i, arr) => {
                 const angle = (i * (360 / arr.length)) - 90;
                 const rad = (angle * Math.PI) / 180;
-                const r = 36;
+                const r = isMobile ? 44 : 36;
 
                 const x = 50 + r * Math.cos(rad);
                 const y = 50 + r * Math.sin(rad);
                 return (
                   <div
                     key={i}
-                    className="absolute bg-[#0a1a0f]/90 border border-green-500/40 rounded-full px-3 py-1 text-[9px] text-green-300 font-bold uppercase tracking-wider whitespace-nowrap backdrop-blur-xl shadow-[0_0_15px_rgba(34,197,94,0.1)] transition-all duration-300 hover:scale-110 hover:border-green-400 hover:text-white"
+                    className="absolute bg-[#0a1a0f]/90 border border-green-500/40 rounded-full px-2 py-0.5 md:px-3 md:py-1 text-[8px] md:text-[9px] text-green-300 font-bold uppercase tracking-wider whitespace-nowrap backdrop-blur-xl shadow-[0_0_15px_rgba(34,197,94,0.1)] transition-all duration-300 hover:scale-110 hover:border-green-400 hover:text-white"
                     style={{ left: `${x}%`, top: `${y}%`, transform: 'translate(-50%,-50%)' }}
                   >
                     {item}
