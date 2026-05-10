@@ -98,7 +98,7 @@ export default function About() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {features.map((item, i) => (
-                <div key={i} className="group relative bg-[#0a1f12]/40 border border-white/5 rounded-2xl p-5 hover:border-brand-green/30 transition-all duration-300 overflow-hidden">
+                <div key={i} className="group relative bg-[#0a1f12]/40 border border-white/5 rounded-2xl p-5 hover:border-brand-green/30 active:bg-brand-green/5 active:scale-[0.98] transition-all duration-300 overflow-hidden cursor-pointer touch-manipulation">
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-green/0 to-brand-green/0 group-hover:from-brand-green/5 group-hover:to-transparent transition-all duration-500" />
                   <div className="relative z-10">
                     <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">

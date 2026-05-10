@@ -46,7 +46,7 @@ export default function Hero() {
           {filteredStats.map((stat, i) => (
             <div
               key={i}
-              className="group relative px-8 py-6 rounded-[2rem] bg-brand-card/30 border border-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-brand-green/5 hover:border-brand-green/30 w-full sm:w-auto sm:min-w-[320px]"
+              className="group relative px-8 py-6 rounded-[2rem] bg-brand-card/30 border border-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-brand-green/5 hover:border-brand-green/30 active:scale-[0.98] active:bg-brand-green/10 w-full sm:w-auto sm:min-w-[320px] cursor-pointer touch-manipulation"
             >
               <div className="relative z-10 flex items-center justify-center sm:justify-start gap-6">
                 <span className="font-display font-black text-5xl md:text-5xl text-brand-green tracking-tighter w-24 text-center sm:text-left">
