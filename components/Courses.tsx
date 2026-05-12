@@ -76,8 +76,8 @@ export default function Courses() {
               key={i}
               className={`transition-all duration-500 ${activeCourse === i ? 'opacity-100 translate-y-0 block' : 'opacity-0 translate-y-4 hidden'}`}
             >
-              <div className="bg-gradient-to-br from-[#0a1f12] to-[#071209] border border-green-500/20 rounded-3xl overflow-hidden shadow-2xl">
-                <div className={`bg-gradient-to-r ${course.color} p-8 relative overflow-hidden`}>
+              <div className="bg-linear-to-br from-brand-card to-[#071209] border border-green-500/20 rounded-3xl overflow-hidden shadow-2xl">
+                <div className={`bg-linear-to-r ${course.color} p-8 relative overflow-hidden`}>
                   <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'2\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
                   <div className="relative flex items-start justify-between">
                     <div>
@@ -116,7 +116,7 @@ export default function Courses() {
                     <ul className="space-y-4">
                       {course.topics.map((topic, j) => (
                         <li key={j} className="flex items-center gap-4 text-gray-300 group">
-                          <span className="w-6 h-6 bg-green-500/10 border border-green-500/20 rounded flex items-center justify-center text-green-400 text-[10px] flex-shrink-0 group-hover:bg-green-500 group-hover:text-black transition-all">
+                          <span className="w-6 h-6 bg-green-500/10 border border-green-500/20 rounded flex items-center justify-center text-green-400 text-[10px] shrink-0 group-hover:bg-green-500 group-hover:text-black transition-all">
                             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                             </svg>
@@ -133,12 +133,12 @@ export default function Courses() {
                     </h4>
                     <div className="grid grid-cols-1 gap-3 mb-8">
                       {course.jobs.map((job, j) => (
-                        <div key={j} className="bg-white/[0.03] border border-white/5 rounded-xl px-5 py-4 text-green-300 text-sm font-bold tracking-wide hover:bg-green-500/10 hover:border-green-500/20 transition-all">
+                        <div key={j} className="bg-white/3 border border-white/5 rounded-xl px-5 py-4 text-green-300 text-sm font-bold tracking-wide hover:bg-green-500/10 hover:border-green-500/20 transition-all">
                           {job}
                         </div>
                       ))}
                     </div>
-                    <div className="bg-gradient-to-r from-green-500/10 to-transparent border-l-2 border-green-500 p-6 flex items-center gap-5">
+                    <div className="bg-linear-to-r from-green-500/10 to-transparent border-l-2 border-green-500 p-6 flex items-center gap-5">
                       <div className="text-green-500">
                         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

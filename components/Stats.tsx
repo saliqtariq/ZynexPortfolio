@@ -15,8 +15,8 @@ export default function Stats() {
 
   return (
     <section id="stats" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-green-950/15 to-transparent pointer-events-none" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-green-950/15 to-transparent pointer-events-none" />
+      <div className="absolute left-0 right-0 top-0 h-px bg-linear-to-r from-transparent via-green-500/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -28,8 +28,8 @@ export default function Stats() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {STATS.map((stat, i) => (
-            <div key={i} className="relative group card-hover bg-gradient-to-br from-white/[0.03] to-white/[0.01] border border-white/10 rounded-3xl p-8 text-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-emerald-500/5 transition-all duration-500" />
+            <div key={i} className="relative group card-hover bg-linear-to-br from-white/3 to-white/1 border border-white/10 rounded-3xl p-8 text-center overflow-hidden">
+              <div className="absolute inset-0 bg-linear-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-emerald-500/5 transition-all duration-500" />
               <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform">{stat.icon}</div>
               <div className="font-display font-black text-5xl text-brand-green mb-2">
                 <AnimatedCounter target={stat.num} suffix={stat.suffix} />
@@ -53,7 +53,7 @@ export default function Stats() {
                     {t.text}
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-brand-green to-green-600 rounded-full flex items-center justify-center font-display font-black text-black text-lg shadow-lg">
+                    <div className="w-14 h-14 bg-linear-to-br from-brand-green to-green-600 rounded-full flex items-center justify-center font-display font-black text-black text-lg shadow-lg">
                       {t.avatar}
                     </div>
                     <div>

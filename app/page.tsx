@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function ZynexPortfolio() {
   return (
-    <main className="min-h-screen bg-[#050f0a] text-white selection:bg-green-500/30 selection:text-green-400">
+    <main className="min-h-screen bg-brand-dark text-white selection:bg-green-500/30 selection:text-green-400">
       <Navbar />
       <Hero />
       <About />

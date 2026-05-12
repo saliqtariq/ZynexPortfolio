@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${outfit.variable} ${dmSans.variable} font-sans antialiased bg-[#050f0a] text-white`}>
+      <body className={`${outfit.variable} ${dmSans.variable} font-sans antialiased bg-brand-dark text-white`}>
         {children}
       </body>
     </html>
