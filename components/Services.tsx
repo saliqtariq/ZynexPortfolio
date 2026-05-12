@@ -85,7 +85,7 @@ export default function Services() {
                     {service.title}
                   </h3>
                   
-                  <p className="text-white/90 text-[11px] leading-relaxed line-clamp-3 mb-6 flex-grow">
+                  <p className="text-white/90 text-[11px] leading-relaxed line-clamp-3 mb-6 grow">
                     {service.desc}
                   </p>
                   
