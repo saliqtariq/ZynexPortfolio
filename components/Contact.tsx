@@ -1,82 +1,113 @@
 "use client";
+import { useState } from "react";
+import { COURSES } from "@/lib/data";
 
 export default function Contact() {
+  const [selectedCourse, setSelectedCourse] = useState("");
+
+  const handleEnrol = () => {
+    if (!selectedCourse) {
+      alert("Please select a course first!");
+      return;
+    }
+    const phoneNumber = "+923000000000"; // Replace with actual owner number
+    const message = `Hello Zynex, I am interested in enrolling in the ${selectedCourse} course. Please provide more details.`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+  };
+
   const info = [
-    { icon: "📧", label: "Email", value: "info@zynexsolutions.com" },
-    { icon: "📱", label: "WhatsApp", value: "+92 300 0000000" },
-    { icon: "📍", label: "Location", value: "Pakistan (Remote Worldwide)" },
+    { 
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ), 
+      label: "Email", 
+      value: "info@zynexsolutions.com" 
+    },
+    { 
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ), 
+      label: "Location", 
+      value: "Pakistan (Remote Worldwide)" 
+    },
   ];
 
   return (
-    <section id="contact" className="py-20 relative scroll-mt-24">
+    <section id="contact" className="pb-20 pt-10 relative scroll-mt-24">
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-green-950/15 to-transparent pointer-events-none" />
-      <div className="absolute left-0 right-0 top-0 h-px bg-linear-to-r from-transparent via-green-500/30 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <div className="tag-chip mb-4">Get In Touch</div>
-        <h2 className="font-display font-black text-3xl md:text-5xl text-white mb-6">
+        <h2 className="font-display font-black text-3xl md:text-5xl text-white mb-12">
           Ready to Start Your<br />
           <span className="shimmer-text">Journey?</span>
         </h2>
-        <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto">
-          Whether you want to enroll in a course or grow your business digitally, we're here to help. Reach out and let's talk.
-        </p>
 
-        <div className="grid md:grid-cols-3 gap-4 mb-12">
+        {/* Enrollment Card */}
+        <div className="bg-[#0a1a0f] border border-green-500/15 rounded-[2.5rem] p-8 md:p-12 shadow-2xl mb-16 relative overflow-hidden group">
+          <div className="absolute -right-20 -top-20 w-64 h-64 bg-brand-green/5 blur-3xl rounded-full transition-all group-hover:bg-brand-green/10" />
+
+          <div className="relative z-10 max-w-xl mx-auto">
+            <h3 className="font-display font-bold text-2xl text-white mb-8">Quick Enrollment</h3>
+
+            <div className="space-y-6">
+              <div className="text-left">
+                <label className="text-sm uppercase tracking-widest text-white mb-3 block ml-2 font-bold">Select Your Course</label>
+                <div className="relative">
+                  <select
+                    value={selectedCourse}
+                    onChange={(e) => setSelectedCourse(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-white appearance-none focus:outline-none focus:border-brand-green/40 focus:bg-white/10 transition-all cursor-pointer text-lg"
+                  >
+                    <option value="" className="bg-[#0a1a0f]">Choose a path...</option>
+                    {COURSES.map((course, i) => (
+                      <option key={i} value={course.title} className="bg-[#0a1a0f]">
+                        {course.title}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-brand-green">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                onClick={handleEnrol}
+                className="w-full btn-primary text-black font-black py-6 rounded-2xl text-xl shadow-[0_10px_40px_rgba(34,197,94,0.3)] hover:shadow-[0_15px_50px_rgba(34,197,94,0.4)] flex items-center justify-center gap-3 active:scale-95 transition-all"
+              >
+                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.67-1.611-.918-2.206-.242-.584-.487-.506-.669-.516-.174-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Enrol Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Traditional Contact Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {info.map((item, i) => (
-            <div key={i} className="bg-white/2 border border-white/10 rounded-2xl p-6 hover:border-brand-green/30 transition-all group">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{item.icon}</div>
-              <div className="text-gray-500 text-[10px] uppercase tracking-widest mb-1">{item.label}</div>
-              <div className="text-white font-medium text-sm group-hover:text-brand-green transition-colors">{item.value}</div>
+            <div key={i} className="bg-[#0a1a0f] border border-green-500/10 rounded-3xl p-8 hover:border-brand-green/40 transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-brand-green/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative z-10 flex flex-col items-center">
+                <div className="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-6 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-black transition-all duration-500">
+                  {item.icon}
+                </div>
+                <div className="text-gray-500 text-xs uppercase tracking-[0.3em] mb-2 font-bold">{item.label}</div>
+                <div className="text-white text-lg font-display font-black group-hover:text-brand-green transition-colors">{item.value}</div>
+              </div>
             </div>
           ))}
         </div>
 
-        <form className="bg-[#0a1a0f] border border-green-500/15 rounded-3xl p-8 text-left shadow-2xl" onSubmit={(e) => e.preventDefault()}>
-          <h3 className="font-display font-bold text-xl text-white mb-6 flex items-center gap-2">
-            <span className="w-1.5 h-6 bg-brand-green rounded-full" />
-            Send Us a Message
-          </h3>
-          <div className="grid md:grid-cols-2 gap-4 mb-4">
-            <div className="space-y-1">
-              <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Name</label>
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-green/40 focus:bg-white/5 transition-all w-full"
-              />
-            </div>
-            <div className="space-y-1">
-              <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Email</label>
-              <input
-                type="email"
-                placeholder="email@example.com"
-                className="bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-green/40 focus:bg-white/5 transition-all w-full"
-              />
-            </div>
-          </div>
-          <div className="space-y-1 mb-4">
-            <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Interested In</label>
-            <select className="bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-gray-400 focus:outline-none focus:border-brand-green/40 focus:bg-white/5 transition-all w-full appearance-none">
-              <option value="" className="bg-[#0a1a0f]">Select an option...</option>
-              <option className="bg-[#0a1a0f]">Cybersecurity Course</option>
-              <option className="bg-[#0a1a0f]">Web Development Course</option>
-              <option className="bg-[#0a1a0f]">Data Analyst Course</option>
-              <option className="bg-[#0a1a0f]">Business Services</option>
-            </select>
-          </div>
-          <div className="space-y-1 mb-6">
-            <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Message</label>
-            <textarea
-              placeholder="Tell us more about your goals..."
-              rows={4}
-              className="bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-brand-green/40 focus:bg-white/5 transition-all w-full resize-none"
-            />
-          </div>
-          <button className="btn-primary w-full text-black font-bold py-4 rounded-xl text-base shadow-xl">
-            Send Message →
-          </button>
-        </form>
       </div>
     </section>
   );
