@@ -12,12 +12,12 @@ export default function Hero() {
   );
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden grid-line-bg scroll-mt-24">
+    <section id="home" className="relative pt-32 pb-8 overflow-hidden grid-line-bg scroll-mt-24">
       <div className="absolute inset-0 hero-glow pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-green-500/5 rounded-full blur-[120px] animate-orb-drift pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-600/5 rounded-full blur-[100px] pointer-events-none" style={{ animation: 'orb-drift 20s ease-in-out infinite reverse' }} />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-16 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-10 tracking-tight animate-in">
           <span className="text-white">Build Your</span>
           <br />

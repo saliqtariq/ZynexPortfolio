@@ -95,10 +95,14 @@ export default function Services() {
                       <span className="text-brand-green font-black text-[10px] uppercase tracking-wider leading-none">Custom Quote</span>
                     </div>
                     <button 
-                      onClick={(e) => { e.stopPropagation(); scrollTo("contact"); }}
+                      onClick={(e) => { 
+                        e.stopPropagation(); 
+                        const msg = encodeURIComponent(`Hi, I'm interested in your ${service.title} service.`);
+                        window.open(`https://wa.me/923358746804?text=${msg}`, "_blank");
+                      }}
                       className="relative overflow-hidden bg-brand-green text-black font-black text-[9px] uppercase tracking-tighter px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 group/btn"
                     >
-                      <span className="relative z-10">Learn More</span>
+                      <span className="relative z-10">Get Quote</span>
                       <div className="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
                     </button>
                   </div>
