@@ -14,8 +14,8 @@ export default function ZynexPortfolio() {
       <Navbar />
       <Hero />
       <About />
-      <Services />
       <Courses />
+      <Services />
       <WhyZynex />
       <Stats />
       <Contact />

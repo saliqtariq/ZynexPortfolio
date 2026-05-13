@@ -1,4 +1,4 @@
-export const NAV_LINKS = ["Home", "About", "Services", "Courses", "Stats", "Contact"];
+export const NAV_LINKS = ["Home", "About", "Courses", "Services", "Stats", "Contact"];
 
 export const SERVICES = [
   { icon: "💻", title: "Custom Software Development", desc: "Enterprise-grade custom software tailored to your complex business workflows. From ERP systems to backend APIs, we build scalable solutions for modern enterprises." },
